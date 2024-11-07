@@ -1,0 +1,146 @@
+:root {
+    --background: #c7c7c7;
+    --text: #000;
+}
+/* CSS Reset */
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #container {
+    overflow: hidden;
+    position: relative;
+    width: 40%;
+} */
+/* Header styling */
+
+body {
+    background-color: var(--background);
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    font-size: 1.25rem;
+    grid-template-columns: 1fr 2fr;
+}
+
+header p {
+    width: 50%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    align-self: center;
+    text-align: center;
+}
+
+nav {
+    width: 50%;
+    text-align: right;
+    justify-self: end;
+    align-self: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+#divider {
+    cursor: default;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+#aboutBtn:hover {
+    cursor: pointer;
+    background-color: var(--text);
+    color: var(--background);
+}
+
+/* About box styling */
+#about {
+    background-color: #d6d6d6;
+    position: absolute;
+    left: 150vw;
+    width: 20%;
+    text-align: center;
+    font-weight: 400;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+#about span {
+    font-size: 0.75rem;
+}
+
+#back {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 0;
+    background-color: var(--background);
+    border: 1px solid #000;
+}
+
+#back:hover {
+    cursor: pointer;
+}
+
+/* About box animation */
+.slideIn {
+    animation-duration: 0.8s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.slideOut {
+    animation-duration: 0.65s;
+    animation-name: slideOut;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideIn {
+    0% {
+        left: 150vw;
+    }
+
+    100% {
+        left: 77vw;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        left: 77vw;
+    }
+
+    50% {
+        left: 70vw;
+    }
+
+    100% {
+        left: 105vw;
+    }
+}
